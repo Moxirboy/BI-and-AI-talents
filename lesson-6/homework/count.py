@@ -16,8 +16,9 @@ def count(name='employee.txt'):
             else:
                 occurs[new] +=1
     return occurs
+name = "sample.txt"
 try:
-    words = count()
+    words = count(name)
 except FileNotFoundError:
     print("file not found please enter file name to create")
     name = input()
