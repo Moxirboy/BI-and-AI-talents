@@ -27,11 +27,18 @@ class Bird(Animal):
     def fly(self):
         print(f'{self._name} is flying')
 
+class Chicken(Animal):
+    def __init__(self, name, age):
+        super().__init__(name,age, "chip chip")
+    
+    def lay_egg(self):
+        print(f'{self._name} laid egg')
+
 
 def farm_demo():
     cow = Cow("barnie",1)
     bird = Bird("sava",2)
-
+    chicken = Chicken("oq",3)
     cow.sound()
     cow.eat("grass")
     cow.milk()
@@ -40,5 +47,8 @@ def farm_demo():
     bird.eat("seeds")
     bird.fly()
     bird.sleep()
-
+    chicken.sound()
+    chicken.eat("seeds")
+    chicken.lay_egg()
+    chicken.sleep()
 farm_demo()
